@@ -35,6 +35,14 @@ Claude Code에서 아래 프롬프트의 `{{변수}}`를 실제 값으로 바꿔
 - owned_paths가 겹치면 리드가 스폰 전에 분리한다.
 - 공통 유틸 등 공유 영역이 필요하면 설계자가 설계 단계에서 별도 파일로 분리하고, 구현자 중 한 명에게만 배정한다.
 - 구현자가 경계 밖 변경이 필요하다고 판단하면 리드에게 메시지로 요청한다.
+
+**코딩 가이드라인 (모든 팀원에게 명시)**:
+- 코드를 작성·수정·리뷰하는 모든 팀원(architect/implementer/reviewer)은 `karpathy-guidelines` 스킬의 4원칙을 따른다:
+  1. **Think Before Coding** — 가정을 명시하고 모호하면 리드에게 질문, 무리한 추측 금지
+  2. **Simplicity First** — 요청한 것만 구현, 미래 대비용 추상화/유연성 금지
+  3. **Surgical Changes** — owned_paths 안에서도 요청과 무관한 리팩토링·스타일 수정 금지
+  4. **Goal-Driven Execution** — 검증 가능한 성공 기준을 정의하고 통과까지 반복
+- 자세한 규칙·anti-pattern 예시는 `.claude/skills/karpathy-guidelines/`(SKILL.md, EXAMPLES.md) 참조.
 ```
 
 ## 태스크 흐름

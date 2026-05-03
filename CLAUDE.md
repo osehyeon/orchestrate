@@ -54,6 +54,7 @@
 템플릿: feature
 작업 디렉토리: qflash_arxiv/        # 또는 output/20260427-login-refactor/
 팀 규모: 5명
+코딩 가이드라인: karpathy-guidelines (Think / Simplicity / Surgical / Goal-Driven)
 
  #  역할        에이전트 타입       모델
  1  설계자      architect          opus
@@ -66,6 +67,8 @@
  [설계자 + 조사자] → [구현자A + 구현자B] → [검증자]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+
+"코딩 가이드라인" 라인은 **코드성 템플릿(feature/debug/review)** 사용 시에만 출력한다. proposal/research/design 템플릿은 코드 변경 비중이 낮으므로 생략.
 
 에이전트 팀 없이 단독으로 처리할 경우에는 한 줄로 명시한 뒤 바로 응답한다:
 ```
@@ -156,6 +159,7 @@ hwpx는 ZIP 기반 포맷이다. 텍스트 추출 방법:
 - 모든 코드는 테스트를 포함해야 한다
 - 기존 코드 스타일을 따른다
 - 보안 취약점(OWASP Top 10)을 주의한다
+- **코딩 가이드라인**: 코드 작성·수정 시 `karpathy-guidelines` 스킬의 4원칙(Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution)을 따른다. 자세한 규칙과 예시는 `.claude/skills/karpathy-guidelines/`(SKILL.md, EXAMPLES.md) 참조. 팀 리드는 `implementer`/`reviewer` 팀원을 스폰할 때 이 스킬을 따르도록 명시한다.
 
 ## 서브에이전트 정의
 
