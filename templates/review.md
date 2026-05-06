@@ -34,10 +34,7 @@ Claude Code에서 아래 프롬프트의 `{{변수}}`를 실제 값으로 바꿔
    - 에러 처리의 일관성 (무음 실패, 중복 catch 방지)
    - 공개 API/타입 변경의 파급 범위
    - 문서·주석이 구현과 일치하는가
-   - **karpathy-guidelines 4원칙 준수** (`.claude/skills/karpathy-guidelines/SKILL.md` 참조):
-     - *Simplicity First*: 요청 범위를 넘는 추상화·유연성·미래 대비 코드가 없는가
-     - *Surgical Changes*: PR 변경이 모두 요청과 직결되는가, drive-by 리팩토링/스타일 수정 없는가
-     - *Goal-Driven*: 변경마다 검증 가능한 테스트 또는 성공 기준이 따라붙는가
+   - **karpathy-guidelines 4원칙 준수**: `karpathy-guidelines` 스킬 4원칙(Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution) 엄수. 특히 PR 변경이 요청과 직결되는지(Surgical), 추상화·유연성 과잉이 없는지(Simplicity), 검증 가능한 테스트가 따라붙는지(Goal-Driven) 점검. 상세는 `.claude/skills/karpathy-guidelines/SKILL.md` 참조.
 
 4. devils-advocate 에이전트 타입으로 "반론자" 팀원을 스폰해줘 — 세 리뷰어의 결론에 반론을 제기한다.
    - 각 리뷰어가 놓쳤을 가능성이 있는 관점

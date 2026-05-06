@@ -35,10 +35,8 @@ Claude Code에서 아래 프롬프트의 `{{변수}}`를 실제 값으로 바꿔
 원인이 확정되면 implementer 에이전트 타입으로 "수정자"를 추가로 스폰해서 수정한다.
 판단 기준: 2명 이상의 조사자가 동일 원인을 지목하거나, 재현 가능한 근거가 제시된 경우.
 
-**수정자 코딩 가이드라인 (스폰 시 반드시 명시)**:
-- `karpathy-guidelines` 스킬 4원칙을 따른다 (`.claude/skills/karpathy-guidelines/` 참조).
-- 특히 **Surgical Changes**: 버그를 유발하는 라인만 수정. 인접 코드의 "개선"·리팩토링·스타일 수정·주석 추가 금지.
-- 특히 **Goal-Driven Execution**: 먼저 버그를 재현하는 테스트를 작성해 실패시킨 뒤(빨간 단계), 수정으로 통과시키고(초록 단계), 기존 테스트가 모두 통과하는지 확인한다.
+**수정자 코딩 가이드라인**: `karpathy-guidelines` 스킬 4원칙(Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution) 엄수. 자세한 규칙·anti-pattern 예시는 `.claude/skills/karpathy-guidelines/SKILL.md` 참조.
+특히 **Surgical Changes**(버그 유발 라인만 수정, 인접 리팩토링·스타일·주석 추가 금지) + **Goal-Driven Execution**(실패하는 재현 테스트 → 수정으로 통과 → 기존 테스트 통과 확인).
 ```
 
 ## 태스크 흐름
