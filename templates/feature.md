@@ -33,7 +33,8 @@ Claude Code에서 아래 프롬프트의 `{{변수}}`를 실제 값으로 바꿔
 **파일 충돌 방지 규칙 (리드가 강제)**:
 - 각 구현자는 자신의 owned_paths 외 경로를 Edit/Write 할 수 없다.
 - owned_paths가 겹치면 리드가 스폰 전에 분리한다.
-- 공통 유틸 등 공유 영역이 필요하면 설계자가 설계 단계에서 별도 파일로 분리하고, 구현자 중 한 명에게만 배정한다.
+- 공통 유틸·타입·설정(예: `utils/`, `types/`, 설정 파일) 등 공유 영역이 필요하면 설계자가 설계 단계에서 식별·분리하고, 구현자 중 한 명에게 전담시키거나 리드가 직접 수정한다.
+- 구현 중 새로운 공유 의존성이 발견되면 구현자는 즉시 리드에게 보고하고, 리드가 위 규칙으로 재배정한다(설계 단계에서 못 잡힌 케이스 대응).
 - 구현자가 경계 밖 변경이 필요하다고 판단하면 리드에게 메시지로 요청한다.
 
 **코딩 가이드라인 (모든 팀원에게 명시)**: `karpathy-guidelines` 스킬 4원칙(Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution) 엄수. 자세한 규칙·anti-pattern 예시는 `.claude/skills/karpathy-guidelines/SKILL.md` 참조.
