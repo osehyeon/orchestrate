@@ -2,3 +2,4 @@ proposal/
 output/
 .DS_Store
 project/
+**/.venv/** 

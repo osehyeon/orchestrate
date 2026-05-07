@@ -41,6 +41,9 @@
       "Bash(python3:*)",
       "Bash(.venv/bin/*:*)",
       "Bash(./scripts/*.sh:*)",
+      "Bash(curl:*)",
+      "Bash(nvidia-smi:*)",
+      "Bash(cuobjdump:*)",
       "Agent",
       "WebFetch",
       "WebSearch"
