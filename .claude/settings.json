@@ -44,9 +44,27 @@
       "Bash(curl:*)",
       "Bash(nvidia-smi:*)",
       "Bash(cuobjdump:*)",
+      "Bash(*)",
       "Agent",
       "WebFetch",
       "WebSearch"
+    ],
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~*)",
+      "Bash(rm -rf $HOME*)",
+      "Bash(sudo:*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -fd*)",
+      "Bash(dd if=*of=/dev/*)",
+      "Bash(mkfs*)",
+      "Bash(shutdown:*)",
+      "Bash(reboot:*)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
     ]
   }
 }

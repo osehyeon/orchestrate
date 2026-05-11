@@ -2,4 +2,17 @@ proposal/
 output/
 .DS_Store
 project/
-**/.venv/** 
+**/.venv/**
+0510_cv/
+0510_ijcai
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+missfont.log
+node_modules
